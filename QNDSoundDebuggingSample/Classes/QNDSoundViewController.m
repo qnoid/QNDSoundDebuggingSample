@@ -1,5 +1,5 @@
 //
-//  QNDSoundDebuggingSampleTests.m
+//  QNDSoundViewController.m
 //  QNDSoundDebuggingSample
 //
 //  Created by Markos Charatzas on 08/06/2013.
@@ -23,27 +23,35 @@
 //  SOFTWARE.
 //
 
-#import "QNDSoundDebuggingSampleTests.h"
 
-@implementation QNDSoundDebuggingSampleTests
+#import "QNDSoundViewController.h"
+#import "QNDSubject.h"
 
-- (void)setUp
+@implementation QNDSoundViewController
+
++(instancetype)newSoundViewController
 {
-    [super setUp];
+    QNDSoundViewController *soundViewController = [[QNDSoundViewController alloc] init];
     
-    // Set-up code here.
+return soundViewController;
 }
 
-- (void)tearDown
+- (id)init
 {
-    // Tear-down code here.
+    self = [super initWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:[self class]]];
     
-    [super tearDown];
+    if (!self) {
+        return nil;
+    }
+    
+return self;
 }
 
-- (void)testExample
+-(void)play:(id)sender
 {
-    STFail(@"Unit tests are not implemented yet in QNDSoundDebuggingSampleTests");
+    QNDSubject *subject = [QNDSubject newSubject];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:QND_NOTIFY_SUBJECT object:nil];
 }
 
 @end

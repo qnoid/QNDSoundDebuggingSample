@@ -1,5 +1,5 @@
 //
-//  QNDSoundDebuggingSampleTests.m
+//  QNDSubject.h
 //  QNDSoundDebuggingSample
 //
 //  Created by Markos Charatzas on 08/06/2013.
@@ -23,27 +23,12 @@
 //  SOFTWARE.
 //
 
-#import "QNDSoundDebuggingSampleTests.h"
+#import <Foundation/Foundation.h>
 
-@implementation QNDSoundDebuggingSampleTests
+extern NSString* const QND_NOTIFY_SUBJECT;
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
-}
+@interface QNDSubject : NSObject
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in QNDSoundDebuggingSampleTests");
-}
++(instancetype)newSubject;
 
 @end

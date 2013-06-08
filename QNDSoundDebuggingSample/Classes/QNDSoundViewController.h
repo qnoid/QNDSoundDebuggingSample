@@ -1,5 +1,5 @@
 //
-//  QNDSoundDebuggingSampleTests.m
+//  QNDSoundViewController.h
 //  QNDSoundDebuggingSample
 //
 //  Created by Markos Charatzas on 08/06/2013.
@@ -23,27 +23,13 @@
 //  SOFTWARE.
 //
 
-#import "QNDSoundDebuggingSampleTests.h"
 
-@implementation QNDSoundDebuggingSampleTests
+#import <UIKit/UIKit.h>
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
-}
+@interface QNDSoundViewController : UIViewController
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
++(instancetype)newSoundViewController;
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in QNDSoundDebuggingSampleTests");
-}
+-(IBAction)play:(id)sender;
 
 @end

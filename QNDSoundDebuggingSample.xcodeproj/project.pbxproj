@@ -21,6 +21,12 @@
 		BDDA284C1763268900F47B39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDA282D1763268900F47B39 /* Foundation.framework */; };
 		BDDA28541763268900F47B39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDA28521763268900F47B39 /* InfoPlist.strings */; };
 		BDDA28571763268900F47B39 /* QNDSoundDebuggingSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA28561763268900F47B39 /* QNDSoundDebuggingSampleTests.m */; };
+		BDDA2862176326BE00F47B39 /* QNDSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA2861176326BE00F47B39 /* QNDSubject.m */; };
+		BDDA2863176326BE00F47B39 /* QNDSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA2861176326BE00F47B39 /* QNDSubject.m */; };
+		BDDA286717632B1B00F47B39 /* QNDSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA286517632B1B00F47B39 /* QNDSoundViewController.m */; };
+		BDDA286817632B1B00F47B39 /* QNDSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA286517632B1B00F47B39 /* QNDSoundViewController.m */; };
+		BDDA286917632B1B00F47B39 /* QNDSoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA286617632B1B00F47B39 /* QNDSoundViewController.xib */; };
+		BDDA286A17632B1B00F47B39 /* QNDSoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA286617632B1B00F47B39 /* QNDSoundViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,11 @@
 		BDDA28531763268900F47B39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BDDA28551763268900F47B39 /* QNDSoundDebuggingSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNDSoundDebuggingSampleTests.h; sourceTree = "<group>"; };
 		BDDA28561763268900F47B39 /* QNDSoundDebuggingSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNDSoundDebuggingSampleTests.m; sourceTree = "<group>"; };
+		BDDA2860176326BE00F47B39 /* QNDSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QNDSubject.h; path = Classes/QNDSubject.h; sourceTree = "<group>"; };
+		BDDA2861176326BE00F47B39 /* QNDSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QNDSubject.m; path = Classes/QNDSubject.m; sourceTree = "<group>"; };
+		BDDA286417632B1B00F47B39 /* QNDSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QNDSoundViewController.h; path = Classes/QNDSoundViewController.h; sourceTree = "<group>"; };
+		BDDA286517632B1B00F47B39 /* QNDSoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QNDSoundViewController.m; path = Classes/QNDSoundViewController.m; sourceTree = "<group>"; };
+		BDDA286617632B1B00F47B39 /* QNDSoundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QNDSoundViewController.xib; path = Classes/QNDSoundViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +123,14 @@
 		BDDA28311763268900F47B39 /* QNDSoundDebuggingSample */ = {
 			isa = PBXGroup;
 			children = (
+				BDDA28321763268900F47B39 /* Supporting Files */,
 				BDDA283A1763268900F47B39 /* QNDAppDelegate.h */,
 				BDDA283B1763268900F47B39 /* QNDAppDelegate.m */,
-				BDDA28321763268900F47B39 /* Supporting Files */,
+				BDDA2860176326BE00F47B39 /* QNDSubject.h */,
+				BDDA2861176326BE00F47B39 /* QNDSubject.m */,
+				BDDA286417632B1B00F47B39 /* QNDSoundViewController.h */,
+				BDDA286517632B1B00F47B39 /* QNDSoundViewController.m */,
+				BDDA286617632B1B00F47B39 /* QNDSoundViewController.xib */,
 			);
 			path = QNDSoundDebuggingSample;
 			sourceTree = "<group>";
@@ -228,6 +244,7 @@
 				BDDA283E1763268900F47B39 /* Default.png in Resources */,
 				BDDA28401763268900F47B39 /* Default@2x.png in Resources */,
 				BDDA28421763268900F47B39 /* Default-568h@2x.png in Resources */,
+				BDDA286917632B1B00F47B39 /* QNDSoundViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDA28541763268900F47B39 /* InfoPlist.strings in Resources */,
+				BDDA286A17632B1B00F47B39 /* QNDSoundViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +282,8 @@
 			files = (
 				BDDA28381763268900F47B39 /* main.m in Sources */,
 				BDDA283C1763268900F47B39 /* QNDAppDelegate.m in Sources */,
+				BDDA2862176326BE00F47B39 /* QNDSubject.m in Sources */,
+				BDDA286717632B1B00F47B39 /* QNDSoundViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDA28571763268900F47B39 /* QNDSoundDebuggingSampleTests.m in Sources */,
+				BDDA2863176326BE00F47B39 /* QNDSubject.m in Sources */,
+				BDDA286817632B1B00F47B39 /* QNDSoundViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

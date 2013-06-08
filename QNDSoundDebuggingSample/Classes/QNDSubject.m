@@ -1,5 +1,5 @@
 //
-//  QNDSoundDebuggingSampleTests.m
+//  QNDSubject.m
 //  QNDSoundDebuggingSample
 //
 //  Created by Markos Charatzas on 08/06/2013.
@@ -23,27 +23,41 @@
 //  SOFTWARE.
 //
 
-#import "QNDSoundDebuggingSampleTests.h"
 
-@implementation QNDSoundDebuggingSampleTests
+#import "QNDSubject.h"
 
-- (void)setUp
+
+NSString* const QND_NOTIFY_SUBJECT = @"com.qnoid.notifications.QNDSubject";
+
+@implementation QNDSubject
+
++(instancetype)newSubject
 {
-    [super setUp];
+    QNDSubject *subject = [QNDSubject new];
+    [subject wasCreated];
+
+    [[NSNotificationCenter defaultCenter] addObserver:subject
+                                             selector:@selector(wasNotified)
+                                                 name:QND_NOTIFY_SUBJECT
+                                               object:nil];
     
-    // Set-up code here.
+return subject;
 }
 
-- (void)tearDown
+-(void)dealloc
 {
-    // Tear-down code here.
-    
-    [super tearDown];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:QND_NOTIFY_SUBJECT
+                                                  object:nil];
 }
 
-- (void)testExample
+-(void)wasCreated
 {
-    STFail(@"Unit tests are not implemented yet in QNDSoundDebuggingSampleTests");
+    {}
 }
 
+-(void)wasNotified
+{
+    {}
+}
 @end
